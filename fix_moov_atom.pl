@@ -107,14 +107,14 @@ sub show_help {
 		my $msg=shift;
         print STDERR ("##	$msg\n\n") if( $msg);
         print STDERR ("Version $version
-This script copy 'begin_bytes' and begin_bytes from file 'in' to file 'out'
+This script copy 'begin_bytes' and 'end_bytes' from file 'in' to file 'out'
 Usage: 
-	$0 --in=IN --out=OUT [--begin_bytes=BB][--end_bytes=EB][ --help ]
+	$0 --in=IN --out=OUT [--begin_bytes=BB][--end_bytes=EB][--nobackup][ --help ]
 Where:
 	--in=IN - Original source file
 	--out=OUT - Target file
-	--begin_bytes=BB - how many bytes need be copy from begin of source file ( default 183 )
-	--end_bytes=EB - how many bytes need be copy from the end of file (default 1500)
+	--begin_bytes=BB - how many bytes need be copy from begin of source file ( default 255 )
+	--end_bytes=EB - how many bytes need be copy from the end of file (default 100k)
 	--nobackup - Warning ! Do not make the backup copy of target file, directly fix all in target file  
 	--help - this help
 Sample:	${0} --in=1.mp4 --out=2.mp4 --nobackup
