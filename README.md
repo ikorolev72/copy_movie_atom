@@ -3,7 +3,7 @@
 
 ##  What is it?
 ##  -----------
-This script copy movie atoms ( moov, mdat, ftyp, etc) from video file 'in' to file 'out'
+This script copy movie atoms ( `moov`, `ftyp`, `uuid` etc) from video file 'in' to file 'out'. Exclude atom `mdat` with video/audio streams. For atom `mdat` script copy only 8 bytes of header and size.
 This can be usefull if your video file have broken header ( eg continius copy from video camera ).
 
 ##  The Latest Version
